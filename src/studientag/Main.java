@@ -17,7 +17,10 @@ public class Main {
         System.out.println("kopf = " + liste.getKopf().getWert());
         liste.add(2);
         System.out.println("kopf = " + liste.getKopf().getWert());
-//        liste.add(11);
+        System.out.println("size = " + liste.getSize());
+        
+        
+        
 //        liste.add(9);
 
     }

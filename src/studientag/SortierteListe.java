@@ -10,13 +10,13 @@ package studientag;
  * @author goesta
  */
 public class SortierteListe {
-    
+
     private Elem kopf;
-    
+
     public SortierteListe() {
         this.kopf = null;
     }
-    
+
     public int loescheMin() {
         if (this.kopf == null) {
             return 0;
@@ -25,31 +25,47 @@ public class SortierteListe {
         this.kopf = temp.getNaechstes();
         return temp.getWert();
     }
-    
+
     public void add(int w) {
-        Elem element = new Elem(w);
+        Elem newElement = new Elem(w);
         if (this.kopf == null) {
-            this.kopf = element;
+            this.kopf = newElement;
         }
-        
-        Elem temp = this.kopf;
-        this.setKopf(element);
-        element.setNaechstes(temp);
-        
-        
-        while (element.getWert() > temp.getWert()) {
-            temp = temp.getNaechstes();
-            
+
+        Elem current = this.kopf;
+        if (newElement.getWert() < current.getWert()) {
+            this.setKopf(newElement);
+            newElement.setNaechstes(newElement);
         }
-        
+//        while (current != null) {
+//            Elem temp = current;
+//            current = current.getNaechstes();
+//            if (newElement.getWert() > current.getWert()) {
+//                temp.setNaechstes(newElement);
+//                newElement.setNaechstes(current);
+//            }
+//            System.out.println("current = " + current.getWert());
+//            System.out.println("start = " + current.getWert());
+//        }
+
     }
-    
+
+    public int getSize() {
+        int count = 0;
+        Elem current = this.kopf;
+        while (current != null) {
+            count++;
+            current = current.getNaechstes();
+        }
+        return count;
+    }
+
     public Elem getKopf() {
         return kopf;
     }
-    
+
     public void setKopf(Elem kopf) {
         this.kopf = kopf;
     }
-    
+
 }
