@@ -12,6 +12,13 @@ package studientag;
 public class Main {
 
     public static void main(String[] args) {
-        Algorithmus a = new Algorithmus();
+        SortierteListe liste = new SortierteListe();
+        liste.add(13);
+        System.out.println("kopf = " + liste.getKopf().getWert());
+        liste.add(2);
+        System.out.println("kopf = " + liste.getKopf().getWert());
+//        liste.add(11);
+//        liste.add(9);
+
     }
 }
