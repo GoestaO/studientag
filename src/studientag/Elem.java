@@ -23,7 +23,7 @@ public class Elem {
 
     //Getter und Setter
     public Elem getNaechstes() {
-        return naechstes;
+        return this.naechstes;
     }
 
     public void setNaechstes(Elem naechstes) {

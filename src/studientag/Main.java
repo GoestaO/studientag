@@ -5,6 +5,8 @@
  */
 package studientag;
 
+import studientag.ke6.LinkedList;
+
 /**
  *
  * @author goesta
@@ -17,11 +19,14 @@ public class Main {
         System.out.println("kopf = " + liste.getKopf().getWert());
         liste.add(2);
         System.out.println("kopf = " + liste.getKopf().getWert());
-        System.out.println("size = " + liste.getSize());
+        System.out.println("size = " + liste.size());
+        liste.add(9);
         
-        
-        
-//        liste.add(9);
+//        LinkedList list = new LinkedList();
+//        list.add(13);
+//        list.add(2);
+//        list.add(123);
+//        System.out.println("list = " + list.size());
 
     }
 }
