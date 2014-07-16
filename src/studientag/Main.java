@@ -20,13 +20,16 @@ public class Main {
         liste.add(2);
         System.out.println("kopf = " + liste.getKopf().getWert());
 //        System.out.println("size = " + liste.size());
-//        liste.add(9);
-        
+        liste.add(9);
+//        System.out.println("kopf = " + liste.getKopf().getWert());
+//        System.out.println("size = " + liste.size());
 //        LinkedList list = new LinkedList();
 //        list.add(13);
 //        list.add(2);
-//        list.add(123);
+        liste.add(123);
 //        System.out.println("list = " + list.size());
+        System.out.println("kopf = " + liste.getKopf().getWert());
 
+        System.out.println("count = " + liste.size());
     }
 }
