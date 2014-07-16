@@ -33,24 +33,22 @@ public class SortierteListe {
         }
 
         Elem current = this.kopf;
-        current.setNaechstes(newElement);
-        
-//        if (newElement.getWert() < current.getWert()) {
-//            this.setKopf(newElement);
-//            newElement.setNaechstes(newElement);
-//            System.out.println("next = " + this.getKopf().getWert());
-//        }
-//        while (current != null) {
-//            Elem temp = current;
-//            current = current.getNaechstes();
-//            if (newElement.getWert() > current.getWert()) {
-//                temp.setNaechstes(newElement);
-//                newElement.setNaechstes(current);
-//            }
-//            System.out.println("current = " + current.getWert());
-//            System.out.println("start = " + current.getWert());
-//        }
+//        current.setNaechstes(newElement);
 
+        if (this.size() > 0 && newElement.getWert() < current.getWert()) {
+            this.setKopf(newElement);
+            newElement.setNaechstes(newElement);
+            System.out.println("next = " + this.getKopf().getWert());
+        } else {
+            while (current != null) {
+                Elem temp = current;
+                current = current.getNaechstes();
+                if (newElement.getWert() > current.getWert()) {
+                    temp.setNaechstes(newElement);
+                    newElement.setNaechstes(current);
+                }                
+            }
+        }
     }
 
     public int size() {

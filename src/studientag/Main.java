@@ -19,8 +19,8 @@ public class Main {
         System.out.println("kopf = " + liste.getKopf().getWert());
         liste.add(2);
         System.out.println("kopf = " + liste.getKopf().getWert());
-        System.out.println("size = " + liste.size());
-        liste.add(9);
+//        System.out.println("size = " + liste.size());
+//        liste.add(9);
         
 //        LinkedList list = new LinkedList();
 //        list.add(13);
