@@ -8,28 +8,30 @@ package studientag;
 import studientag.ke6.LinkedList;
 
 /**
- *
+ * 
  * @author goesta
  */
 public class Main {
 
-    public static void main(String[] args) {
-        SortierteListe liste = new SortierteListe();
-        liste.add(13);
-        System.out.println("kopf = " + liste.getKopf().getWert());
-        liste.add(2);
-        System.out.println("kopf = " + liste.getKopf().getWert());
-//        System.out.println("size = " + liste.size());
-        liste.add(9);
-//        System.out.println("kopf = " + liste.getKopf().getWert());
-//        System.out.println("size = " + liste.size());
-//        LinkedList list = new LinkedList();
-//        list.add(13);
-//        list.add(2);
-        liste.add(123);
-//        System.out.println("list = " + list.size());
-        System.out.println("kopf = " + liste.getKopf().getWert());
+	public static void main(String[] args) {
+		SortierteListe liste = new SortierteListe();
+		liste.add(13);
+		// System.out.println("kopf = " + liste.getKopf().getWert());
+		liste.add(2);
+		// System.out.println("kopf = " + liste.getKopf().getWert());
+		// System.out.println("size = " + liste.size());
+//		liste.add(9);
+		// System.out.println("kopf = " + liste.getKopf().getWert());
+		// System.out.println("size = " + liste.size());
+		// LinkedList list = new LinkedList();
+		// list.add(13);
+		// list.add(2);
+//		liste.add(123);
+		
+		System.out.println(liste.size());
+		// System.out.println("list = " + list.size());
+		// System.out.println("kopf = " + liste.getKopf().getWert());
 
-        System.out.println("count = " + liste.size());
-    }
+		// System.out.println("count = " + liste.size());
+	}
 }
