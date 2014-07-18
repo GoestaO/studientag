@@ -30,10 +30,24 @@ public class SortierteListe {
         Elem newElement = new Elem(w);
         if (this.kopf == null) {
             this.setKopf(newElement);
+        }
+        if (newElement.getWert() < this.getKopf().getWert()) {
+            Elem temp = this.getKopf();
+            this.setKopf(newElement);
+            newElement.setNaechstes(temp);
         } else {
             Elem current = this.kopf;
-            this.setKopf(newElement);
-            newElement.setNaechstes(current);
+            while (current != null && current.getWert() < newElement.getWert()) {
+                current = current.getNaechstes();
+            }
+            System.out.println("newElement = " + newElement.getWert());
+            System.out.println("current = " + current);
+            Elem temp = current.getNaechstes();
+            current.setNaechstes(newElement);
+            newElement.setNaechstes(temp);
+
+//            this.setKopf(newElement);
+//            newElement.setNaechstes(current);
         }
     }
 
@@ -42,7 +56,6 @@ public class SortierteListe {
         Elem current = this.kopf;
         while (current != null) {
             count++;
-            System.out.println("current = " + current.getWert());
             current = current.getNaechstes();
 
         }
