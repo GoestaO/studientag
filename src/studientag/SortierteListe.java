@@ -37,17 +37,12 @@ public class SortierteListe {
             newElement.setNaechstes(temp);
         } else {
             Elem current = this.kopf;
-            while (current != null && current.getWert() < newElement.getWert()) {
+            while (current.getNaechstes() != null && current.getWert() < newElement.getWert()) {
                 current = current.getNaechstes();
             }
-            System.out.println("newElement = " + newElement.getWert());
-            System.out.println("current = " + current);
             Elem temp = current.getNaechstes();
             current.setNaechstes(newElement);
             newElement.setNaechstes(temp);
-
-//            this.setKopf(newElement);
-//            newElement.setNaechstes(current);
         }
     }
 
