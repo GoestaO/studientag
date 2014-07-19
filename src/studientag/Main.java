@@ -8,7 +8,7 @@ package studientag;
 import studientag.ke6.LinkedList;
 
 /**
- *
+ * 
  * @author goesta
  */
 public class Main {
