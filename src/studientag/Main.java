@@ -8,30 +8,25 @@ package studientag;
 import studientag.ke6.LinkedList;
 
 /**
- * 
+ *
  * @author goesta
  */
 public class Main {
 
     public static void main(String[] args) {
-        SortierteListe liste = new SortierteListe();
-        liste.add(13);
-        System.out.println("size = " + liste.size());
-        System.out.println("---------------------");
-        liste.add(2);
-        System.out.println("size = " + liste.size());
-        System.out.println("---------------------");
-        liste.add(9);
-        System.out.println("size = " + liste.size());
-        System.out.println("---------------------");
-        liste.add(123);
-        System.out.println("size = " + liste.size());
-        System.out.println("---------------------");
-//        liste.add(125);
-//        liste.add(3);
-//        System.out.println("list = " + list.size());
-////        System.out.println("kopf = " + liste.getKopf().getWert());
-//
-//        System.out.println("count = " + liste.size());
+//        SortierteListe liste = new SortierteListe();
+//        liste.add(13);
+//        liste.add(2);
+//        liste.add(9);
+//        liste.add(123);
+//        liste.add(1);
+//        System.out.println("löschen: " + liste.loescheMin());
+//        System.out.println("löschen: " + liste.loescheMin());
+//        System.out.println("löschen: " + liste.loescheMin());
+//        System.out.println("löschen: " + liste.loescheMin());
+//        System.out.println("löschen: " + liste.loescheMin());
+        Geldwechsler g = new Geldwechsler();
+        System.out.println("neues Geld = " + g.wechsle("EUR", "USD", 200000));
+
     }
 }
