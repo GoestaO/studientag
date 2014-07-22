@@ -18,34 +18,39 @@ public class Geldwechsler {
 //- 10,00 DOLLAR werden zu 6,40 PFUND
 //- 10,00 PFUND werden zu 12,50 EURO
 //- 10,00 PFUND werden zu 15,70 DOLLAR
-        int returnValue = 0;
+        double result = 0;
         switch (von) {
             case "EUR":
                 switch (nach) {
                     case "USD":
-                        returnValue = 1270 / 1000 * startvalue;
+                        result = 1.27 * startvalue;
+                        break;
 
                     case "GPB":
-                        returnValue = 800 / 1000 * startvalue;
-                }
-            case "USD":
-                switch (nach) {
-                    case "EUR":
-                        returnValue = 780 / 1000 * startvalue;
-                    case "GPB":
-                        returnValue = 640 / 1000 * startvalue;
+                        result = 0.8 * startvalue;
+                        break;
                 }
             case "GBP":
                 switch (nach) {
                     case "EUR":
-                        returnValue = 1250 / 1000 * startvalue;
+                        result = 1250 / 1000 * startvalue;
+                        break;
                     case "USD":
-                        returnValue = 1570 / 1000 * startvalue;
+                        result = 1570 / 1000 * startvalue;
+                        break;
+                }
+            case "USD":
+                switch (nach) {
+                    case "EUR":
+                        result = 780 / 1000 * startvalue;
+                        break;
+                    case "GPB":
+                        result = 640 / 1000 * startvalue;
+                        break;
                 }
 
         }
-        System.out.println("returnValue = " + returnValue);
-        return returnValue;
+        return (int) result;
     }
 
 }

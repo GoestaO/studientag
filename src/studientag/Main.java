@@ -26,7 +26,8 @@ public class Main {
 //        System.out.println("löschen: " + liste.loescheMin());
 //        System.out.println("löschen: " + liste.loescheMin());
         Geldwechsler g = new Geldwechsler();
-        System.out.println("neues Geld = " + g.wechsle("EUR", "USD", 200000));
+        System.out.println("neues Geld = " + g.wechsle("EUR", "USD", 1000));
+//        
 
     }
 }
