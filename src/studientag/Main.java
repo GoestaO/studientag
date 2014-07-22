@@ -26,8 +26,24 @@ public class Main {
 //        System.out.println("löschen: " + liste.loescheMin());
 //        System.out.println("löschen: " + liste.loescheMin());
         Geldwechsler g = new Geldwechsler();
-        System.out.println("neues Geld = " + g.wechsle("EUR", "USD", 1000));
-//        
+        try{
+            g.wechsle("EUR", "USD", 2000);
+            g.wechsle("EUR", "GBP", 2000);
+            g.wechsle("USD", "EUR", 2000);
+            g.wechsle("USD", "GBP", 2000);
+            g.wechsle("GBP", "EUR", 2000);
+            g.wechsle("GBP", "USD", 2000);
+            g.wechsle("FRA", "EUR", 2000);
+            g.wechsle("GBP", "FRA", 2000);
+            
+        }catch(IllegalArgumentException iaex){
+            System.err.println(iaex + ": Diese Währung ist nicht gültig, bitte mal überprüfen!");
+        }
+        
+//        String von = "EUR";
+//        String nach = "USD";
+//        System.out.println(!((von.equals("EUR") || von.equals("USD") || von.equals("GBP")) && (nach.equals("EUR") || nach.equals("USD") || nach.equals("GBP"))));
 
+//        
     }
 }

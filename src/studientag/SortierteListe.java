@@ -33,8 +33,7 @@ public class SortierteListe {
 
     public void add(int w) {
         // Neues Element erzeugen
-        Elem newElement = new Elem(w);
-        System.out.println("newElement = " + newElement.getWert());
+        Elem newElement = new Elem(w);        
         // Wenn die Liste leer ist, das neue Element als Kopf setzen
         if (this.kopf == null) {
             this.setKopf(newElement);
